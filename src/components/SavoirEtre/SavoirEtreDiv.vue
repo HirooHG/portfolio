@@ -1,9 +1,7 @@
 <template>
   <div class="SavoirEtreDiv">
-    <div class="title&com">
-      <div class="titlediv">
-        <h1 class="title">Savoir-être</h1>
-      </div>
+    <div class="title_com">
+      <h1 class="title">Savoir-être</h1>
       <div v-for="savoirEtre of savoirEtres" :key="savoirEtre.id">
         <SavoirEtre :savoirEtre="savoirEtre"/>
       </div>
@@ -53,11 +51,11 @@ export default {
 
 <style scoped>
 .SavoirEtreDiv {
-  background-color: white;
   width: 100%;
   height: 70vh;
   display: flex;
   justify-content: space-around;
+  color: white;
   align-items: center;
 }
 </style>
