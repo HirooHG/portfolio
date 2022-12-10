@@ -26,6 +26,11 @@ export default {
   background-color: white;
 }
 
+.reseau:hover {
+  transform: scale(1.1);
+  transition: transform 330ms ease-in-out;
+}
+
 * {
   position: relative;
 }

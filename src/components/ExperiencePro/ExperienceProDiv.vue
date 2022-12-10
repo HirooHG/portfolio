@@ -1,15 +1,15 @@
 <template>
   <div class="ExperienceProDiv">
     <div class="titlediv">
-      <h1 class="title">Expériences professionnelles</h1>
+      <h1 class="title">Expérience professionnelle</h1>
     </div>
     <div class="expdiv">
       <ExperiencePro
           date="2021 - 2022"
           precision="travail d'été en intérim"
           title="Pôle juridique - patrimonial"
-          company="Haute-Savoie Habitat - Annecy (74)"
-          :tasks=tasks1
+          desc="Haute-Savoie Habitat - Annecy (74)"
+          :tasks="tasks"
       />
     </div>
   </div>
@@ -25,20 +25,32 @@ export default {
   },
   data() {
     return {
-      tasks1: [
-        {
-          id: 1,
-          name: "Travail sur une base de données Excel"
-        }
-      ]
-    }
+      tasks: {
+        "1": "Travail sur une base de données Excel",
+      }
+    };
   }
 }
 </script>
 
 <style scoped>
 .ExperienceProDiv {
-  height: 70vh;
-  background: white;
+  color: white;
+  border-bottom: white solid 1px;
+  border-top: white solid 1px;
+  padding-bottom: 10vh;
 }
+
+.titlediv {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.expdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
 </style>
