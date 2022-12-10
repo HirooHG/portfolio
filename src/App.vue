@@ -1,26 +1,54 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Bar></Bar>
+  <InfoDiv></InfoDiv>
+  <ReseauDiv/>
+  <EducationDiv/>
+  <ExperienceProDiv/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Bar from './components/Bar.vue'
+import InfoDiv from "@/components/Infos/InfoDiv.vue";
+import ReseauDiv from "@/components/reseaux/ReseauDiv.vue";
+import EducationDiv from "@/components/education/EducationDiv.vue";
+import ExperienceProDiv from "@/components/ExperiencePro/ExperienceProDiv.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Bar,
+    InfoDiv,
+    ReseauDiv,
+    EducationDiv,
+    ExperienceProDiv
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+body {
+  background: #1a1a1a;
+}
+InfoDiv {
+  margin-top: 50px;
+}
+
+.titlediv {
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 10px;
+  /*color: transparent;
+  background: linear-gradient(90deg, #42d392 0%, #50b0bf 50%, #6088f2 100%);*/
+}
+
 </style>
