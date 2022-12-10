@@ -17,7 +17,8 @@ export default {
     date: String,
     precision: String,
     title: String,
-    description: String,
+    company: String,
+    task: Array,
   }
 }
 </script>
