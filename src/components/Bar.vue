@@ -9,9 +9,7 @@
       <li><router-link to>Langues</router-link></li>
       <li><router-link to>Centres d'intérêts</router-link></li>
     </ul>
-    <div class="titlediv">
-      <h1 class="title">Hugo.G</h1>
-    </div>
+    <h1 class="title" id="name">Hugo GOLLIET</h1>
   </div>
 
 </template>
@@ -50,7 +48,7 @@ export default {
   top: 0;
   position: fixed;
   background: #1a1a1a;
-  z-index: 10;
+  z-index: 1;
 }
 .Bar ul {
   list-style: none;
@@ -76,6 +74,10 @@ router-link {
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+
+#name {
+  font-size: 2.5em;
 }
 
 router-link:hover, .active{

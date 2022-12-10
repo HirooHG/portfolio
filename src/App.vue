@@ -47,20 +47,17 @@ export default {
 body {
   background: #1a1a1a;
 }
+
 InfoDiv {
   margin-top: 50px;
 }
 
-.titlediv {
-  z-index: 1;
-}
-
 .title {
-  font-size: 2.5em;
+  font-size: 3.5em;
   font-weight: bold;
   margin: 10px;
-  /*color: transparent;
-  background: linear-gradient(90deg, #42d392 0%, #50b0bf 50%, #6088f2 100%);*/
+  background: linear-gradient(90deg, #42d392 0%, #50b0bf 50%, #6088f2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 </style>

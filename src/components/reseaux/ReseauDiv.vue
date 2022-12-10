@@ -2,9 +2,9 @@
   <div class="reseauxDiv">
     <div class="linkdiv">
       <h1 class="title">Réseaux Sociaux</h1>
-      <Linkedin/>
+      <Linkedin class="reseau"/>
     </div>
-    <Github/>
+    <Github class="reseau"/>
   </div>
 </template>
 
@@ -22,8 +22,11 @@ export default {
 </script>
 
 <style scoped>
-* {
+.reseau {
   background-color: white;
+}
+
+* {
   position: relative;
 }
 
@@ -35,23 +38,23 @@ h1 {
 
 .linkdiv {
   position: relative;
-
 }
 
 .linkdiv h1 {
   position: absolute;
-  top: -100px;
+  top: -150px;
   left: -200px;
   width: 100vh;
 }
 
 .reseauxDiv {
   width: 100%;
-  height: 70vh;
+  height: 95vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   border-bottom: white solid 1px;
+  border-top: white solid 1px;
 }
 </style>
