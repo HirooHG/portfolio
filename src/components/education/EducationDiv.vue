@@ -58,6 +58,12 @@ export default {
 </script>
 
 <style scoped>
+
+.titlediv {
+  margin-top: 50px;
+  margin-left: 10%;
+}
+
 .educationDiv {
   color: white;
   height: 90vh;
@@ -74,7 +80,7 @@ export default {
 }
 
 img {
-  height: 100px;
+  height: 200px;
 }
 
 .education {
@@ -82,7 +88,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin: 100px 0 0 100px;
+  margin-left: 5%;
 }
 
 .BUT, .lycee {
@@ -100,7 +106,7 @@ img {
 }
 
 .logos {
-  width: 40%;
+  width: 30%;
   height: 80%;
   display: flex;
   flex-direction: column;
