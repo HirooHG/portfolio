@@ -4,6 +4,7 @@
 
 <script>
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 export default {
   name: "Three_cube_me",
@@ -15,10 +16,13 @@ export default {
       this.scene = new THREE.Scene();
       this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+
       this.renderer = new THREE.WebGLRenderer();
       this.renderer.setClearColor( 0x000000, 0 );
       this.renderer.setSize(500, 500);
       document.getElementById('three-root').appendChild(this.renderer.domElement);
+
+      this.controls = new OrbitControls(this.camera, this.renderer.domElement );
 
       let geometry = new THREE.BoxGeometry(2, 1, 2);
       const textureLoader = new THREE.TextureLoader();
@@ -35,6 +39,7 @@ export default {
     animate() {
       this.cube.rotation.y += 0.0025;
       this.renderer.render(this.scene, this.camera);
+      this.controls.update();
       requestAnimationFrame(this.animate);
     }
   }

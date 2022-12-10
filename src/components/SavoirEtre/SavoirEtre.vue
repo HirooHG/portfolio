@@ -26,6 +26,7 @@ export default {
 .se {
   display: flex;
   gap: 5px;
+  font-size: 2em;
 }
 
 </style>

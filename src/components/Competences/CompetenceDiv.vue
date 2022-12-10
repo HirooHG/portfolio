@@ -32,13 +32,13 @@ components: {
         },
         {
           id: 3,
-          title: "Git",
-          desc: "Github",
+          title: "Versioning",
+          desc: "Git",
         },
         {
           id: 4,
-          title: "Base de données",
-          desc: "SQLite - PostgreSQL",
+          title: "SQLite - PostgreSQL",
+          desc: "SQL",
         },
       ]
     }

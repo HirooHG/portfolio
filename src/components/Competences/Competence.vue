@@ -9,7 +9,7 @@
       <div v-else-if="competence.title === 'NodeJS'">
         <DeNodejsOriginal class="icon"/>
       </div>
-      <div v-else-if="competence.title === 'Git'">
+      <div v-else-if="competence.title === 'Versioning'">
         <BxGit class="icon"/>
       </div>
       <div v-else class="database">
