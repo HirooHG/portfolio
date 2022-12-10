@@ -1,23 +1,23 @@
 <template>
   <div class="SavoirEtreDiv">
-    <div class="title_com">
-      <h1 class="title">Savoir-être</h1>
-      <div v-for="savoirEtre of savoirEtres" :key="savoirEtre.id">
-        <SavoirEtre :savoirEtre="savoirEtre"/>
+    <h1 class="title">Savoir-être</h1>
+    <div class="content">
+      <div class="SEs">
+        <div  v-for="savoirEtre of savoirEtres" :key="savoirEtre.id">
+          <SavoirEtre :savoirEtre="savoirEtre"/>
+        </div>
       </div>
+      <img src="@/assets/se.png" alt="Noice">
     </div>
-    <IllustrationSavoirEtre/>
   </div>
 </template>
 
 <script>
-import IllustrationSavoirEtre from "@/components/SavoirEtre/IllustrationSavoirEtre.vue";
 import SavoirEtre from "@/components/SavoirEtre/SavoirEtre.vue";
 
 export default {
   name: "SavoirEtreDiv",
   components: {
-    IllustrationSavoirEtre,
     SavoirEtre
   },
   data() {
@@ -50,12 +50,30 @@ export default {
 </script>
 
 <style scoped>
+
+img {
+  width: 200px;
+}
+
 .SavoirEtreDiv {
   width: 100%;
   height: 70vh;
-  display: flex;
-  justify-content: space-around;
   color: white;
+  border-bottom: white 1px solid;
+}
+
+.title {
+  font-size: 3.5rem;
+  padding: 0;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.content {
+  display: flex;
+  height: 70%;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 </style>

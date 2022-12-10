@@ -3,8 +3,10 @@
     <div class="titlediv">
       <h1 class="title">Langues</h1>
     </div>
-    <div v-for="langue in langues" :key="langue.id">
-      <Langue :langue="langue"/>
+    <div class="Langues">
+      <div v-for="langue in langues" :key="langue.id">
+        <Langue :langue="langue"/>
+      </div>
     </div>
   </div>
 </template>
@@ -29,7 +31,7 @@ export default {
         {
           id: 2,
           name: "Espagnol",
-          level: "A2 : intermédiaire",
+          level: "intermédiaire",
           isAsiat: false
         },
         {
@@ -49,5 +51,17 @@ export default {
   height: 70vh;
   width: 100%;
   color: white;
+}
+
+.title {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.Langues {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60%;
 }
 </style>
