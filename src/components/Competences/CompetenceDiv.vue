@@ -1,10 +1,10 @@
 <template>
   <div class="CompetenceDiv">
-    <div class="titlediv">
-      <h1 class="title">Compétences</h1>
-    </div>
-    <div class="competences" v-for="comp of competences" :key="comp.id">
-      <Competence :competence="comp"/>
+    <h1 class="title">Compétences</h1>
+    <div class="competences">
+      <div v-for="comp of competences" :key="comp.id">
+        <Competence :competence="comp"/>
+      </div>
     </div>
   </div>
 </template>
@@ -50,8 +50,23 @@ components: {
 
 .CompetenceDiv {
   width: 100%;
-  height: 70vh;
   color: white;
+  padding-bottom: 5%;
+  border-bottom: white 1px solid;
+}
+
+.title {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.competences {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+  row-gap: 5%;
+  flex-wrap: wrap;
 }
 
 </style>

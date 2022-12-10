@@ -66,7 +66,7 @@ export default {
 
 .educationDiv {
   color: white;
-  height: 90vh;
+  height: 92vh;
   width: 100%;
   display: flex;
   flex-direction: column;
