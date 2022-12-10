@@ -1,17 +1,25 @@
 <template>
-  <Bar></Bar>
-  <InfoDiv></InfoDiv>
+  <Bar/>
+  <InfoDiv/>
   <ReseauDiv/>
   <EducationDiv/>
   <ExperienceProDiv/>
+  <CompetenceDiv/>
+  <SavoirEtreDiv/>
+  <LanguesDiv/>
+  <CentreInteretsDiv/>
 </template>
 
 <script>
-import Bar from './components/Bar.vue'
+import Bar from '@/components/Bar.vue'
 import InfoDiv from "@/components/Infos/InfoDiv.vue";
 import ReseauDiv from "@/components/reseaux/ReseauDiv.vue";
 import EducationDiv from "@/components/education/EducationDiv.vue";
 import ExperienceProDiv from "@/components/ExperiencePro/ExperienceProDiv.vue";
+import CompetenceDiv from "@/components/Competences/CompetenceDiv.vue";
+import SavoirEtreDiv from "@/components/SavoirEtre/SavoirEtreDiv.vue";
+import LanguesDiv from "@/components/Langues/LanguesDiv.vue";
+import CentreInteretsDiv from "@/components/CentresInterets/CentreInteretsDiv.vue";
 
 export default {
   name: 'App',
@@ -20,7 +28,11 @@ export default {
     InfoDiv,
     ReseauDiv,
     EducationDiv,
-    ExperienceProDiv
+    ExperienceProDiv,
+    CompetenceDiv,
+    SavoirEtreDiv,
+    LanguesDiv,
+    CentreInteretsDiv
   }
 }
 </script>
