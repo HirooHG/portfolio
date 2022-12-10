@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .infodiv {
-  height: 70vh;
+  height: 100vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
