@@ -1,15 +1,10 @@
 <template>
   <div class="Bar">
-    <ul>
-      <li><router-link to>Informations personnelles</router-link></li>
-      <li><router-link to>Réseaux Sociaux</router-link></li>
-      <li><router-link to>Education</router-link></li>
-      <li><router-link to>Expérience professionnelle</router-link></li>
-      <li><router-link to>Compétences</router-link></li>
-      <li><router-link to>Langues</router-link></li>
-      <li><router-link to>Centres d'intérêts</router-link></li>
-    </ul>
-    <h1 class="title" id="name">Hugo GOLLIET</h1>
+    <div id="nav">
+      <router-link :to="{ name: 'Accueil'}">Accueil</router-link>
+      <router-link :to="{ name: 'Projects'}">Projets</router-link>
+    </div>
+    <h1 class="title" id="name">Hugo GOLLIET </h1>
   </div>
 
 </template>
@@ -53,10 +48,9 @@ export default {
 .Bar ul {
   list-style: none;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  gap: 2%;
-  width: 100vh;
+  width: 40vh;
   height: 100%;
   flex-wrap: nowrap;
 }
@@ -66,21 +60,25 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
-  font-size: 14px;
+  font-size: 20px;
 }
 
-router-link {
-  text-decoration: none;
-  color: white;
+#nav {
+  display: flex;
+  gap: 50%;
+}
+
+#nav a{
   font-weight: bold;
-  cursor: pointer;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 
 #name {
   font-size: 2.5em;
-}
-
-router-link:hover, .active{
-  color: #4cbb7e;
 }
 </style>

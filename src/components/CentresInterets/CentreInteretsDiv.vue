@@ -1,10 +1,10 @@
 <template>
-  <div class="centresInteret">
-    <div class="titlediv">
-      <h1 class="title">Centres d'intérêt</h1>
-    </div>
-    <div v-for="centreInteret of centreInterets" :key="centreInteret.id">
-      <CentreInteret :centreInteret="centreInteret"/>
+  <div class="centresInteretDiv">
+    <h1 class="title">Centres d'intérêt</h1>
+    <div class="centresInteret">
+      <div  v-for="centreInteret of centreInterets" :key="centreInteret.id">
+        <CentreInteret :centreInteret="centreInteret"/>
+      </div>
     </div>
   </div>
 </template>
@@ -22,12 +22,14 @@ export default {
       centreInterets: [
         {
           id: 1,
-          desc: "Développement mobile d'applications utiles à la vie de tous les jours : liste de course sur un serveur" +
-              "local, gestionnaire de mots de passe cryptés et plein d'autres."
+          desc: "Développement d'applications mobile utiles à la vie de tous les jours : un jeu de poker avec des websockets en serveur" +
+              " local, un gestionnaire de mots de passe cryptés et plein d'autres.",
+          link: ""
         },
         {
           id: 2,
-          desc: "Jeux-vidéo type exploration d'environnement avec une histoire remplie d'énigmes."
+          desc: "Apprendre beaucoup de choses, toutes les nouvelles technologies que ce soit du développement\n" +
+              "web, mobile ou encore de la théorie des compilateurs et des langages de programmation."
         },
         {
           id: 3,
@@ -40,8 +42,23 @@ export default {
 </script>
 
 <style scoped>
-.centresInteret {
-  height: 70vh;
-  background-color: white;
+.centresInteretDiv {
+  height: 92vh;
+  border-top: white 1px solid;
 }
+
+.title {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.centresInteret {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 </style>

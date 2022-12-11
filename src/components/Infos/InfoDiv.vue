@@ -1,4 +1,7 @@
 <template>
+  <div class="Sujet">
+    Stage en Développement mobile
+  </div>
   <div class="infodiv">
     <Infos></Infos>
     <Three_cube_me></three_cube_me>
@@ -19,6 +22,19 @@ export default {
 </script>
 
 <style scoped>
+.Sujet {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  color: white;
+
+  height: 25vh;
+
+  margin-top: 75px;
+  font-size: 7em;
+  font-weight: bold;
+}
+
 .infodiv {
   height: 100vh;
   display: flex;
