@@ -13,12 +13,7 @@ const routes = [
         path: '/projects',
         name: 'Projects',
         component: Projects
-    },
-    {
-        path: '/~golhug/',
-        name: 'Accueil',
-        component: CV
-    },
+    }
 ]
 
 const router = createRouter({
