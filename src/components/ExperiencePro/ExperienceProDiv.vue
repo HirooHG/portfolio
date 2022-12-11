@@ -29,6 +29,15 @@ export default {
         "1": "Travail sur une base de données Excel",
       }
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 2400) {
+        document.querySelectorAll(".expdiv").forEach((expro) => {
+          expro.classList.add("active");
+        });
+      }
+    });
   }
 }
 </script>
@@ -41,6 +50,25 @@ export default {
   padding-bottom: 10vh;
 }
 
+.active {
+  animation-name: expanim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes expanim {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .titlediv {
   margin-left: 10%;
   margin-top: 5%;
@@ -51,6 +79,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 65vh;
+  opacity: 0;
 }
 
 </style>
