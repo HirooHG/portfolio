@@ -36,7 +36,7 @@ export default {
         },
         {
           id: 3,
-          name: "Chinois",
+          name: "Mandarin",
           level: "débutant",
           isAsiat: true
         }
