@@ -4,7 +4,7 @@
       <h1 class="title">Langues</h1>
     </div>
     <div class="Langues">
-      <div v-for="langue in langues" :key="langue.id">
+      <div v-for="langue in langues" :key="langue.id" class="langue" :class="langue.name">
         <Langue :langue="langue"/>
       </div>
     </div>
@@ -42,6 +42,15 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 4700) {
+        document.querySelectorAll(".langue").forEach((langue) => {
+          langue.classList.add("active");
+        });
+      }
+    });
   }
 }
 </script>
@@ -51,6 +60,38 @@ export default {
   height: 70vh;
   width: 100%;
   color: white;
+}
+
+.langue {
+  opacity: 0;
+}
+
+.active {
+  animation-name: langueanim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.Anglais {
+  animation-delay: 1s;
+}
+
+.Espagnol {
+  animation-delay: 1.5s;
+}
+
+.Mandarin {
+  animation-delay: 2s;
+}
+
+@keyframes langueanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .title {

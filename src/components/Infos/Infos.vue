@@ -56,7 +56,44 @@ export default {
   align-items: center;
   justify-content: start;
   gap: 20px;
+  opacity: 0;
+  animation-name: infos;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
+
+.address {
+  animation-delay: 0.5s;
+}
+
+.phone {
+  animation-delay: 1.5s;
+}
+
+.dateBirth {
+  animation-delay: 2.5s;
+}
+
+.email {
+  animation-delay: 3.5s;
+}
+
+.permis {
+  animation-delay: 4.5s;
+}
+
+@keyframes infos {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .info {
   color: white;
   position: relative;

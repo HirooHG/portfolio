@@ -17,6 +17,15 @@ export default {
   components: {
     Linkedin,
     Github
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 900) {
+        document.querySelectorAll(".reseau").forEach((reseau) => {
+          reseau.classList.add("active");
+        });
+      }
+    });
   }
 }
 </script>
@@ -24,11 +33,30 @@ export default {
 <style scoped>
 .reseau {
   background-color: white;
+  opacity: 0;
 }
 
 .reseau:hover {
   transform: scale(1.1);
   transition: transform 330ms ease-in-out;
+}
+
+.active {
+  animation-name: reseau;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes reseau {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 * {
