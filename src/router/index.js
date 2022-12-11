@@ -5,7 +5,7 @@ import CV from "@/views/CV.vue";
 
 const routes = [
     {
-        path: '/',
+        path: '',
         name: 'Accueil',
         component: CV
     },
