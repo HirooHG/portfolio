@@ -15,8 +15,8 @@ const routes = [
         component: Projects
     },
     {
-        path: '/~golhug',
-        name: 'golhug',
+        path: '/~golhug/',
+        name: 'Accueil',
         component: CV
     },
 ]
