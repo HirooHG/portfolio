@@ -26,7 +26,7 @@ export default {
 
       let geometry = new THREE.BoxGeometry(2, 1, 2);
       const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load('Photo.jpg');
+      const texture = textureLoader.load('/Photo.jpg');
       let material = new THREE.MeshBasicMaterial({ map: texture });
       this.cube = new THREE.Mesh(geometry, material);
       this.scene.add(this.cube);
