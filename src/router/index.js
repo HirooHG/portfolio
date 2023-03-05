@@ -5,7 +5,7 @@ import CV from "@/views/CV.vue";
 
 const routes = [
     {
-        path: '',
+        path: '/',
         name: 'Accueil',
         component: CV
     },
@@ -13,11 +13,6 @@ const routes = [
         path: '/projects',
         name: 'Projects',
         component: Projects
-    },
-    {
-        path: '/~golhug/',
-        name: 'Accueil',
-        component: CV
     },
 ]
 
