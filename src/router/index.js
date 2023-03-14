@@ -10,13 +10,18 @@ const routes = [
         component: CV
     },
     {
+        path: '/',
+        name: 'Root',
+        component: CV
+    },
+    {
         path: '/projects',
         name: 'Projects',
         component: Projects
     },
     {
         path: '/~golhug/',
-        name: 'Accueil',
+        name: 'server',
         component: CV
     },
 ]

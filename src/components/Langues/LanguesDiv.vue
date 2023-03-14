@@ -74,15 +74,15 @@ export default {
 }
 
 .Anglais {
-  animation-delay: 1s;
+  animation-delay: 0.25s;
 }
 
 .Espagnol {
-  animation-delay: 1.5s;
+  animation-delay: 1.25s;
 }
 
 .Mandarin {
-  animation-delay: 2s;
+  animation-delay: 2.25s;
 }
 
 @keyframes langueanim {

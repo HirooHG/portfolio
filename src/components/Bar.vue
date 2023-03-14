@@ -15,7 +15,6 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Bar",
   mounted() {
-    //set link active
     let links = document.querySelectorAll("router-link");
     links.forEach((link) => {
       link.addEventListener("click", () => {
